@@ -1,0 +1,154 @@
+:root {
+  --color1: #FF731D;
+  --color2: #5F9DF7;
+  --color3: #D58BDD;
+  --color4: #A62349;
+  --color5: #256D85;
+  --color6: #674747;
+  --color7: #FD841F;
+  --color8: #E0D98C;
+  --color9: #293462;
+  --color-bg: #533483;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: #fff;
+}
+
+.container_principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.box {
+  margin: auto;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  max-width: 1200px;
+}
+
+.box_header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.box_header-children {
+  width: calc(50% - 1em);
+  height: 200px;
+  padding: 1em;
+  border-radius: 1em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.box_header-children:nth-child(1) {
+  background-color: var(--color1);
+}
+
+.box_header-children:nth-child(2) {
+  background-color: var(--color2);
+}
+
+.box_body {
+  display: flex;
+}
+
+.box_body-menu {
+  width: 70%;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.box_body-menu-articles {
+ width: calc(33.33% - 1em);
+ padding: 1em;
+ border-radius: 1em;
+ height: 200px;
+
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+
+.box_body-menu-articles:nth-child(1) {
+  background-color: var(--color3);
+}
+.box_body-menu-articles:nth-child(2) {
+  background-color: var(--color4);
+}
+.box_body-menu-articles:nth-child(3) {
+  background-color: var(--color5);
+}
+.box_body-menu-articles:nth-child(4) {
+  background-color: var(--color6);
+}
+.box_body-menu-articles:nth-child(5) {
+  background-color: var(--color7);
+}
+.box_body-menu-articles:nth-child(6) {
+  background-color: var(--color8);
+}
+
+.box_aside {
+  width: 29%;
+  background-color: var(--color9);
+  padding: 1em;
+  border-radius: 1em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  padding: 1em;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .box_body-menu-articles {
+    width: calc(50% - 1em);
+   }
+}
+
+@media (max-width: 600px) {
+  .box_body-menu-articles {
+    width: 100%;
+   }
+
+   
+  .box_header-children {
+    width: 100%;
+   }
+
+   .box_body {
+    flex-direction: column;
+    gap: 1em;
+   }
+
+   .box_body-menu {
+    width: 100%;
+   }
+
+   .box_aside {
+    width: 100%;
+    min-height: 400px;
+   }
+}
